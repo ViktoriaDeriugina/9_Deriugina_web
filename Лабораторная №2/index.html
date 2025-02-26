@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Революционное Изобретение "Не забудь!"</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            min-width: 320px; 
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr; 
+            grid-gap: 20px;
+        }
+
+        .ad {
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: #f9f9f9;
+            display: flex;  
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .ad img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            text-align: center; 
+        }
+
+        .main-content img {
+            max-width: 100%; 
+            height: auto;
+            margin-bottom: 10px; 
+        }
+
+        .main-content ul {
+            list-style-type: disc; 
+            padding-left: 20px;
+            text-align: left; 
+        }
+
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            text-align: center;
+            max-width: 90%;  
+        }
+
+        .popup button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        
+        @media (min-width: 768px) {
+            main {
+                grid-template-columns: 2fr 1fr; 
+            }
+
+            .main-content {
+                align-items: flex-start; 
+                text-align: left;
+            }
+
+            .main-content img {
+                float: right;
+                margin-left: 20px;
+                max-width: 40%; 
+            }
+
+            .ad {
+                align-items: flex-start; 
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Революционное Изобретение "Не забудь!"</h1>
+    <p>Больше никогда ничего не забывайте!</p>
+</header>
+
+<main>
+    <section class="main-content">
+        <h2>Уникальное изобретение, которое изменит вашу жизнь!</h2>
+        <img src="Очки.png" alt="Очки Не забудь!">
+        <p>Вы вечно забываете, что хотели сделать, и вас это раздражает? Тогда это именно то, что вы искали!</p>
+        <p>Представляем "Не забудь!" - инновационные очки, которые проецируют ваш список дел прямо перед вашими глазами!</p>
+        <p>Больше не нужно мучиться и вспоминать! Благодаря этим очкам ваш список дел всегда будет перед глазами.</p>
+        <p><strong>Преимущества:</strong></p>
+        <ul>
+            <li>Всегда помните, что нужно сделать</li>
+            <li>Повышение продуктивности на 200%</li>
+            <li>Больше никаких забытых дней рождения и встреч</li>
+        </ul>
+    </section>
+
+    <aside class="ad">
+        <h3>Спонсор: Супер-Предложение!</h3>
+        <p>Купите прямо сейчас и получите второй товар в подарок!</p>
+        <img src="Очки.png" alt="Очки не забудь!">
+        <a href="dop2.html">Узнать больше</a>
+    </aside>
+
+    <aside class="ad">
+        <h3>Спонсор: Уникальный Курс!</h3>
+        <p>Станьте гуру продуктивности всего за 30 дней!</p>
+        <a href="dop.html">Записаться сейчас</a>
+    </aside>
+</main>
+
+<div class="popup" id="popup1">
+    <h2>Специальное предложение!</h2>
+    <p>Только сегодня скидка 50% на все наши товары, включая очки "Не забудь"!</p>
+    <img src="Очки.png" alt="Очки не забудь!">
+    <button onclick="closePopup('popup1')">Закрыть</button>
+</div>
+
+<div class="popup" id="popup2" style="display: none;">
+    <h2>Не уходите!</h2>
+    <p>Подпишитесь на нашу рассылку и получите бесплатный подарок!</p>
+    <button onclick="closePopup('popup2')">Закрыть</button>
+</div>
+
+<script>
+    function closePopup(popupId) {
+        document.getElementById(popupId).style.display = 'none';
+    }
+
+    // Показываем первый попап через 2 секунды
+    setTimeout(function() {
+        document.getElementById('popup1').style.display = 'block';
+    }, 2000);
+
+    // Показываем второй попап через 7 секунд
+    setTimeout(function() {
+        document.getElementById('popup2').style.display = 'block';
+    }, 7000);
+
+</script>
+
+</body>
+</html>

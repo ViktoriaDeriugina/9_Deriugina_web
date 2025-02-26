@@ -1,0 +1,92 @@
+.one{
+	/*position: relative;*/
+	width: 100%;
+	height: 100%;
+    text-align: center;
+	background-image: url(film1.jpg);
+	padding-bottom: 600px;
+	background-size: 1500px 600px;
+}
+.line{
+    position: absolute;
+    bottom: 170px;
+    left: 1000px;
+	color:white;
+	font-style: italic;
+	z-index: 1;
+	font-size:40px;
+}
+.nav {
+	font-size:20px;
+	font-style: italic;
+	display: inline-flex;
+	position: relative;
+	overflow: hidden;
+	max-width:100%;
+	background-color: #fff;
+	padding: 0 400px;
+	border-radius: 40px;
+	box-shadow: 0 10px 40px rgb(27, 56, 10);
+}
+.nav-item {
+	color:rgb(15, 147, 121);
+	padding: 20px;
+	text-decoration: none;
+	transition: .3s;
+	margin: 0 6px;
+	z-index: 1;
+	font-family: 'DM Sans', sans-serif;
+	font-weight: 500;
+	position: relative;
+	
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: -6px;
+		left: 0;
+		width: 100%;
+		height: 5px;
+		background-color: #dfe2ea;
+		border-radius: 8px 8px 0 0;
+		opacity: 0;
+		transition: .3s;
+	}
+}
+.nav-item:not(.is-active):hover:before {
+	opacity: 1;
+	bottom: 0;
+}
+.nav-item:not(.is-active):hover {color: #cf2e43;}
+
+.nav-indicator {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 4px;
+	transition: .4s;
+	height: 5px;
+	z-index: 1;
+	border-radius: 8px 8px 0 0;
+}
+
+@media (max-width: 580px){
+	.nav { overflow: auto;}
+}
+.container {
+	/* Опционально: чтобы ограничить ширину контейнера */
+	width: 80%;
+	margin: 0 auto; /* центрирование */
+  }
+  
+  .container img {
+	display: inline-block; /*  Ключевое свойство */
+	width: 40%;   
+	height: 300px;        /*  Определите ширину каждой картинки (можно в пикселях) */
+	margin-right: 1%;     /*  Необязательно: отступ между картинками */
+	vertical-align: top;  /*  Важно: для выравнивания картинок по верхнему краю */
+  }
+  
+  /* Для последней картинки убираем отступ справа */
+  .container img:last-child {
+	margin-right: 0;
+  }

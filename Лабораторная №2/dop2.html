@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Не забудь! - Революционные Очки для Памяти</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            min-width: 320px; 
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 1.5em; 
+        }
+
+        header p {
+            font-size: 0.9em; 
+        }
+
+        nav {
+            background-color: #eee;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 5px; 
+            text-decoration: none;
+            color: #333;
+            display: inline-block; 
+            white-space: nowrap; 
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .feature {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: white;
+        }
+
+        .feature h3 {
+            color: #333;
+            font-size: 1.1em; 
+        }
+
+        .feature p {
+            font-size: 0.9em; 
+        }
+
+        .ad {
+            border: 2px solid #ff9900;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+            background-color: #fff9f0;
+        }
+
+        .ad img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .popup button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .blinking {
+            animation: blinker 1s linear infinite;
+        }
+
+        .slider {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider img {
+            width: 100%;
+            height: auto;
+        }
+
+        #intro {
+            text-align: center; 
+        }
+
+        #intro img {
+            max-width: 80%; 
+            height: auto;
+            margin: 10px auto; 
+            display: block;
+        }
+
+        @media (min-width: 768px) {
+            #features {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+                grid-gap: 20px;
+            }
+
+            #features .ad {
+                grid-column: 1 / -1; 
+            }
+
+            #intro {
+                text-align: left; 
+            }
+
+            #intro img {
+                max-width: 50%;
+                margin: 0; 
+                float: right; 
+            }
+
+            header h1 {
+                font-size: 2em; 
+            }
+
+            header p {
+                font-size: 1em; 
+            }
+
+            nav a {
+                margin: 0 10px; 
+            }
+
+            .feature h3 {
+                 font-size: 1.3em; 
+            }
+
+            .feature p {
+                font-size: 1em; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Революционные Очки "Не забудь!"</h1>
+    <p>Никогда больше не забывайте о важных делах!</p>
+</header>
+
+<nav>
+    <a href="dop2.html">Главная</a> |
+    <a href="#features">Преимущества</a> |
+    <a href="#testimonials">Отзывы</a> 
+</nav>
+
+<main>
+
+    <div class="ad blinking">
+        <h2>Специальное предложение!</h2>
+        <p>Купите сейчас и получите дополнительный год гарантии!</p>
+        <a href="dop3.html">Заказать прямо сейчас!</a>
+    </div>
+
+    <section id="intro">
+        <h2>Что такое "Не забудь!"?</h2>
+        <p>
+            "Не забудь!" - это инновационные очки, которые проецируют ваш список дел прямо перед вашими глазами!
+            Больше никаких записок, напоминаний и забытых задач. "Не забудь!" всегда подскажут вам, что нужно сделать.
+        </p>
+        <img src="Очки.png" alt="Очки Не забудь!">
+    </section>
+
+    <section id="features">
+        <h2>Преимущества "Не забудь!"</h2>
+
+        <div class="feature">
+            <h3>Всегда помните о важных делах</h3>
+            <p>Список задач всегда перед глазами, в любое время и в любом месте.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Повышение продуктивности</h3>
+            <p>Больше никаких забытых встреч, дней рождений и других важных событий.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Простота использования</h3>
+            <p>Просто наденьте очки и ваш список дел появится автоматически.</p>
+        </div>
+
+        <div class="ad">
+            <img src="Реклама.png" alt="Реклама нашего партнера">
+        </div>
+    </section>
+
+    <section id="testimonials">
+      <h2>Отзывы</h2>
+        <p>Скоро здесь будут отзывы...</p>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 Все права защищены</p>
+</footer>
+
+</body>
+</html>

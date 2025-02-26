@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт с сюрпризами!</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            min-width: 320px; 
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+        }
+
+        h2 {
+          text-align: center;
+        }
+
+        .error-popup, .ad-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            text-align: center;
+            width: 80%; 
+            max-width: 400px; 
+        }
+
+        .error-popup button, .ad-popup button {
+            padding: 10px 20px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .error-popup button {
+            background-color: #f44336;
+        }
+
+        .ad-popup button {
+            background-color: #4CAF50;
+        }
+
+        .ad {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            background-color: #f9f9f9;
+            width: 100%; 
+            box-sizing: border-box; 
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .blinking {
+            animation: blinker 1s linear infinite;
+        }
+
+        @media (min-width: 768px) {
+            main {
+                max-width: 800px;
+                margin: 20px auto;
+                align-items: stretch; 
+            }
+
+            h2 {
+                text-align: left; 
+            }
+
+            .ad {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Добро пожаловать на странный сайт!</h1>
+    <p>Будьте готовы к неожиданностям...</p>
+</header>
+
+<main>
+    <div class="ad blinking">
+        <h3>Супер Акция!</h3>
+        <p>Купите прямо сейчас и получите скидку 99%!</p>
+        <a href="dop3.html">Узнать больше</a>
+    </div>
+
+    <h2>О нашем сайте</h2>
+    <p>Мы предлагаем уникальный опыт использования интернета.  Будьте готовы к внезапным сюрпризам!</p>
+
+    <div class="ad">
+        <h3>Спонсор: Новый Сервис!</h3>
+        <p>Улучшите свою жизнь с нашим инновационным сервисом!</p>
+        <a href="dop2.html">Подробнее</a>
+    </div>
+</main>
+
+<div class="error-popup" id="errorPopup" style="display: none;">
+    <h2>Упс! Произошла ошибка!</h2>
+    <p>Пожалуйста, попробуйте позже.</p>
+    <button onclick="closeError()">Закрыть</button>
+</div>
+
+<div class="ad-popup" id="adPopup" style="display: none;">
+    <h2>Специальное предложение!</h2>
+    <p>Только для вас! Супер-скидка на наш премиум-продукт!</p>
+    <button onclick="closeAd()">Закрыть</button>
+</div>
+
+<script>
+    setTimeout(function() {
+        document.getElementById('errorPopup').style.display = 'block';
+    }, 1000);
+
+    function closeError() {
+        document.getElementById('errorPopup').style.display = 'none';
+        showAd();
+    }
+
+    function showAd() {
+        document.getElementById('adPopup').style.display = 'block';
+    }
+
+    function closeAd() {
+        document.getElementById('adPopup').style.display = 'none';
+    }
+
+    setInterval(function() {
+        console.log("Реклама: Купите наш продукт прямо сейчас!");
+    }, 5000);
+</script>
+
+</body>
+</html>
